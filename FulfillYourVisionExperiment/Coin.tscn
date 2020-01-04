@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://FulfillYourVisionExperiment/ItemSpriteFrames.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://FulfillYourVisionExperiment/AssetShaders/outline.shader" type="Shader" id=2]
+[ext_resource path="res://FulfillYourVisionExperiment/Coin.gd" type="Script" id=3]
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 2 )
+shader_param/intensity = 32
+shader_param/precision = 0.02
+shader_param/outline_color = Color( 0.909804, 0.917647, 0, 1 )
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 6.32456
+
+[node name="Coin" type="StaticBody2D"]
+script = ExtResource( 3 )
+material_highlight = SubResource( 3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = ExtResource( 1 )
+animation = "coin"
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )

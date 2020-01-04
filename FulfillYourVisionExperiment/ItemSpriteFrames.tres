@@ -1,0 +1,14 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=2]
+
+[ext_resource path="res://FulfillYourVisionExperiment/AssetAnimations/coin/coin_3.png" type="Texture" id=1]
+[ext_resource path="res://FulfillYourVisionExperiment/AssetAnimations/coin/coin_4.png" type="Texture" id=2]
+[ext_resource path="res://FulfillYourVisionExperiment/AssetAnimations/coin/coin_1.png" type="Texture" id=3]
+[ext_resource path="res://FulfillYourVisionExperiment/AssetAnimations/coin/coin_2.png" type="Texture" id=4]
+
+[resource]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "coin",
+"speed": 4.0
+} ]
